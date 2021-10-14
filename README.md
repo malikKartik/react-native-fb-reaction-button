@@ -8,9 +8,10 @@
 
 
 ### Demo 1
-![demo1](https://user-images.githubusercontent.com/54643521/137390208-6f9cd97c-a3b7-469e-aa1c-7bc178450001.gif)
+![demo2](https://user-images.githubusercontent.com/54643521/137390201-2cde0679-a98f-4b67-89ef-5513a9e4bb6c.gif)
+
 
 ### Demo 2
-![demo2](https://user-images.githubusercontent.com/54643521/137390201-2cde0679-a98f-4b67-89ef-5513a9e4bb6c.gif)
+![demo1](https://user-images.githubusercontent.com/54643521/137390208-6f9cd97c-a3b7-469e-aa1c-7bc178450001.gif)
  
 *Note: Tested and developed on Android*
