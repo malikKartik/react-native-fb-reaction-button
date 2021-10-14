@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-} from 'react-native';
-import { TapGestureHandler } from 'react-native-gesture-handler';
+import React, {useState} from 'react';
+import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
+import {TapGestureHandler} from 'react-native-gesture-handler';
 import Post from './src/components/Post';
+import {POSTS} from './src/constants/misc';
 
 const App = () => {
   const [isReactionBarOpen, setIsReactBarOpen] = useState(false);
+
+  const handleGlobalTap = () => {
+    setIsReactBarOpen(false);
+  };
+
   return (
     <SafeAreaView style={styles.screen}>
-      <TapGestureHandler onActivated={()=>{
-        setIsReactBarOpen(false)
-      }}>
-      <ScrollView style={styles.screen}>
-        <Post isReactionBarOpen={isReactionBarOpen} setIsReactBarOpen={setIsReactBarOpen}/>
-        <Post isReactionBarOpen={isReactionBarOpen} setIsReactBarOpen={setIsReactBarOpen}/>
-        <Post isReactionBarOpen={isReactionBarOpen} setIsReactBarOpen={setIsReactBarOpen}/>
-      </ScrollView>
+      <TapGestureHandler onActivated={handleGlobalTap}>
+        <ScrollView style={styles.screen}>
+          {POSTS.map(post => {
+            return (
+              <Post
+                postData={post}
+                isReactionBarOpen={isReactionBarOpen}
+                setIsReactBarOpen={setIsReactBarOpen}
+              />
+            );
+          })}
+        </ScrollView>
       </TapGestureHandler>
     </SafeAreaView>
   );
