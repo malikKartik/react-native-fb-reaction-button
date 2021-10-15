@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {actionTitles} from '.';
 import AntDesignIcons from 'react-native-vector-icons/AntDesign';
 import {Image, StyleSheet} from 'react-native';
 import {REACTION_IMAGES} from '../../constants/enums';
+import {actionTitles} from '../../constants/misc';
 
 export const useHandleActionInteraction = ({
   isReactionBarOpen,
