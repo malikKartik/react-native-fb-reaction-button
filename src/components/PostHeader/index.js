@@ -14,9 +14,7 @@ const PostHeader = ({name, title, profileImage}) => {
           />
         </View>
         <View style={styles.headerText}>
-          <Text style={{color: 'black', fontWeight: '600', fontSize: 16}}>
-            {name}
-          </Text>
+          <Text style={styles.name}>{name}</Text>
           <Text>{title}</Text>
         </View>
       </View>
@@ -44,6 +42,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  name: {color: 'black', fontWeight: '600', fontSize: 16},
   spaceBetween: {
     justifyContent: 'space-between',
   },

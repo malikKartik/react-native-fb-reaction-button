@@ -1,38 +1,12 @@
-import React, {useRef} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import EntypoIcons from 'react-native-vector-icons/Entypo';
-import FontistoIcons from 'react-native-vector-icons/Fontisto';
-import AntDesignIcons from 'react-native-vector-icons/AntDesign';
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {
   LongPressGestureHandler,
   TapGestureHandler,
 } from 'react-native-gesture-handler';
 import {useHandleActionInteraction} from './hooks';
 import ReactionsBar from './ReactionsBar';
-
-export const actionTitles = {
-  LIKE: 'Like',
-  COMMENT: 'Comment',
-  SHARE: 'Share',
-};
-
-const ACTIONS = [
-  {
-    iconFamily: AntDesignIcons,
-    iconName: 'like2',
-    title: actionTitles.LIKE,
-  },
-  {
-    iconFamily: FontistoIcons,
-    iconName: 'comment',
-    title: actionTitles.COMMENT,
-  },
-  {
-    iconFamily: EntypoIcons,
-    iconName: 'share',
-    title: actionTitles.SHARE,
-  },
-];
+import {ACTIONS, actionTitles} from '../../constants/misc';
 
 const ActionBar = ({isReactionBarOpen, setIsReactBarOpen, reactionBarRef}) => {
   const {
